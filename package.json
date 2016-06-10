@@ -1,10 +1,10 @@
 {
-  "name": "npm-base",
+  "name": "whosampled",
   "version": "1.0.0",
-  "description": "A base NPM package for writing a NPM package in ES2015",
+  "description": "An unofficial whosampled api",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadirahq/npm-base.git"
+    "url": "https://github.com/dylan-conlin/whosampled.git"
   },
   "license": "MIT",
   "options": {
