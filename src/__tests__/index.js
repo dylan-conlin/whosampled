@@ -1,5 +1,5 @@
 import {expect} from 'chai';
-import {WhoSampled} from '../';
+import WhoSampled from '../';
 const {describe, it} = global;
 const whosamp = new WhoSampled();
 
@@ -24,7 +24,24 @@ describe('WhoSampled', () => {
     })
 
     it.only('returns all samples', async () => {
-      const result = await whosamp.samples({q: 'maceo plex', limit: 1});
+      const result = await whosamp.samples({q: 'marvin gaye grapevine', limit: 10});
+      console.log(result)
+      
+      textconst printTrackNames = (type, tracks) => {
+        return tracks.map((track) => {
+          if (type === 'dest') {
+            return track.dest.artist + ' - ' + track.dest.name
+          } else if (type === 'source') {
+            return track.source.artist + ' - ' + track.source.name
+          }
+          return false;
+        })
+      }
+      // console.log(whosamp._sourceTrackNames(result))
+      console.log(printTrackNames('source', result))
+      
+      // console.log(whosamp.jaroWinklerDistance('keni burke risin to the top', 'Risin\' to the Top'))
+      
     })
 
 
