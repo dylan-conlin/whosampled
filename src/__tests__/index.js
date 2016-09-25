@@ -27,7 +27,7 @@ describe('WhoSampled', () => {
       const result = await whosamp.samples({q: 'marvin gaye grapevine', limit: 10});
       console.log(result)
       
-      textconst printTrackNames = (type, tracks) => {
+      const printTrackNames = (type, tracks) => {
         return tracks.map((track) => {
           if (type === 'dest') {
             return track.dest.artist + ' - ' + track.dest.name
